@@ -1,1 +1,1 @@
-# resp_papers
+# responsive papers
