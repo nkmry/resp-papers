@@ -21,7 +21,7 @@ decompress:
 
 html: $(WORK_DIR)
 	echo "Generating HTML"
-	docker run -v `pwd`:/docdir -w /docdir --user `id -u`:`id -g` latexml/ar5ivist --source=`ls -S $(WORK_DIR)/*.tex | head -n 1` --destination=$(HTML)
+	docker run --rm -v `pwd`:/docdir -w /docdir --user `id -u`:`id -g` latexml/ar5ivist --source=`ls -S $(WORK_DIR)/*.tex | head -n 1` --destination=$(HTML)
 
 clean:
 	echo "Cleaning"
